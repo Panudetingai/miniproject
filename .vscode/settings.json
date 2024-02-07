@@ -1,0 +1,9 @@
+{
+    "tailwindCSS.experimental.configFile": null,
+    "tailwindCSS.experimental.classRegex": [
+
+
+    ],
+    "tailwindCSS.colorDecorators": false,
+    "css.lint.unknownAtRules": "ignore"
+}
