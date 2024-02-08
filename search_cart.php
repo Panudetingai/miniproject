@@ -133,7 +133,7 @@ if (isset($_GET['delete_cart'])) {
     <div class="product lg:px-56 my-12 max-sm:px-12" id="about">
         <div class="head flex justify-between">
             <h1 class="text-2xl font-bold">Edit Product</h1>
-            <form action="search_cart.php" method="post" class="search flex items-center border rounded-md overflow-hidden">
+            <form action="search.php" method="post" class="search flex items-center border rounded-md overflow-hidden">
                 <input type="text" name="search" class="px-2 outline-none" placeholder="Search" id="">
                 <button class="fa-solid fa-magnifying-glass bg-black text-white py-2 px-3"></button>
             </form>
@@ -194,9 +194,13 @@ if (isset($_GET['delete_cart'])) {
                 </thead>
                 <tbody>
                     <?php
+                    $search = $_POST['search'];
+
                     $sql_c =  "SELECT user_tbl.*, plant_tbl.*, cart_tbl.* FROM cart_tbl 
-                    INNER JOIN user_tbl on cart_tbl.user_id = user_tbl.user_id 
-                    INNER JOIN plant_tbl on cart_tbl.plant_id = plant_tbl.plant_id where $user_id = cart_tbl.user_id";
+                    INNER JOIN user_tbl ON cart_tbl.user_id = user_tbl.user_id 
+                    INNER JOIN plant_tbl ON cart_tbl.plant_id = plant_tbl.plant_id 
+                    WHERE cart_tbl.user_id = $user_id 
+                    AND (plant_name LIKE '%$search%' OR plant_type LIKE '%$search%')";
                     $qr_c = $conn->query($sql_c);
                     if ($qr_c->num_rows > 0) {
                         foreach ($qr_c as $cart) {

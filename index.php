@@ -70,7 +70,7 @@ $row = $qr->fetch_array();
                                             <p><?php echo $row['price'] ?> บาท</p>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="bg-black text-white w-full py-2 rounded-md my-2">Add Card</button>
+                                            <a href="#product" class="bg-black text-white w-full py-2 btn hover:bg-slate-600 rounded-md my-2">Add Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ $row = $qr->fetch_array();
         </div>
     </div>
 
-    <div class="product lg:px-56 my-12 max-sm:px-12" id="about">
+    <div class="product lg:px-56 my-12 max-sm:px-12" id="product">
         <h1 class="text-2xl font-bold">Product</h1>
         <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-5 my-5">
 
@@ -182,7 +182,7 @@ $row = $qr->fetch_array();
             ?>
         </div>
         <?php
-        if (count($product) > 8) {
+        if (count($product) < 8) {
         ?>
             <div class="w-full flex justify-center">
                 <a href="index.php?loadmore" class="text-center py-2 px-4 bg-black text-white load-more">Load more</a>
