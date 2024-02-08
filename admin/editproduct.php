@@ -103,15 +103,6 @@ if (isset($_GET['delete_product'])) {
             }
             ?>
         </div>
-        <?php
-        if ($product < 8) {
-        ?>
-            <div class="btn w-full flex justify-center">
-                <button class="text-center py-2 px-4 bg-black text-white">Load more</button>
-            </div>
-        <?php
-        }
-        ?>
     </div>
 
     <!-- modal edit product -->

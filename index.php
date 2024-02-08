@@ -177,12 +177,14 @@ $row = $qr->fetch_array();
             ?>
         </div>
         <?php
-        if (count($product) < 8) {
+        if (count($product) > 8) {
         ?>
             <div class="w-full flex justify-center">
                 <a href="index.php?loadmore" class="text-center py-2 px-4 bg-black text-white load-more">Load more</a>
             </div>
         <?php
+        } else{
+            echo '';
         }
         ?>
     </div>
