@@ -26,7 +26,7 @@ if (isset($_POST['edit_product'])) {
     $part = "../assets/img/product/";
 
     $uploaded = move_uploaded_file($tmp_name, $part . $img);
-    $sql_p = "UPDATE plant_tbl set plant_name = '$name', plant_type = '$type', price = '$price', discount = '$discount' where plant_tbl.plant_id = $plant_id";
+    $sql_p = "UPDATE plant_tbl set plant_name = '$name', plant_type = '$type', price = '$price', discount = '$discount' where plant_id = $plant_id";
     $qr_p = $conn->query($sql_p);
     echo "
             <script>
@@ -65,8 +65,8 @@ if (isset($_POST['edit_product'])) {
             Swal.fire({
                 position: 'top',
                 type: 'error',
-                icon: 'error',
-                title: 'please select image product',
+                icon: 'question',
+                title: 'Please select image product',
             });
         });
         </script>
