@@ -144,7 +144,7 @@ $row = $qr->fetch_array();
                     $price_old = $product['price'];
                     $price = $price_old - ($price_old * $discount / 100);
             ?>
-                    <div class="card-product w-60 bg-white rounded-md overflow-hidden shadow hover:scale-105 duration-150 ease-out" data-aos="fade-up" data-aos-duration="1500">
+                    <form action="add_cart.php" method="post" class="card-product w-60 bg-white rounded-md overflow-hidden shadow hover:scale-105 duration-150 ease-out" data-aos="fade-up" data-aos-duration="1500">
                         <div class="card-body-product relative">
                             <img src="assets/img/product/<?php echo $product['plant_img'] ?>" class="object-cover h-40 w-full" alt="">
                             <div class="discount absolute top-0 left-0 bg-green-700 text-white rounded-r-sm px-2">
@@ -165,9 +165,11 @@ $row = $qr->fetch_array();
                                 <i class="fa-solid text-yellow-500 fa-star"></i>
                                 <p class="px-1">4.2</p>
                             </div>
+                            <input type="number" name="quantity" class="outline-none px-2 py-1 mt-2 w-full border rounded-md" value="1" id="">
+                            <input type="hidden" name="plant_id" value="<?php echo $product['plant_id']?>">
                             <button class="w-full bg-black text-white rounded-md py-2 my-2">Add to card</button>
                         </div>
-                    </div>
+                    </form>
                 <?php
                 }
             } else {
