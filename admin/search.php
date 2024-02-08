@@ -66,7 +66,8 @@ if (isset($_GET['delete_product'])) {
         <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-5 my-5">
             <?php
             $search = $_POST['search'];
-            $sql = "SELECT * FROM plant_tbl where plant_name like '%$search%' and plant_type like '%$search%'";
+            
+            $sql = "SELECT * FROM plant_tbl where plant_name like '%$search%' or plant_type like '%$search%'";
             $qr = $conn->query($sql);
             if ($qr->num_rows > 0) {
                 foreach ($qr as $product) {
