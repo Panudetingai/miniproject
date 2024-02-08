@@ -140,6 +140,9 @@ $row = $qr->fetch_array();
             $qr = $conn->query($sql);
             if ($qr->num_rows > 0) {
                 foreach ($qr as $product) {
+                    $discount = $product['discount'];
+                    $price_old = $product['price'];
+                    $price = $price_old - ($price_old * $discount / 100);
             ?>
                     <div class="card-product w-60 bg-white rounded-md overflow-hidden shadow hover:scale-105 duration-150 ease-out" data-aos="fade-up" data-aos-duration="1500">
                         <div class="card-body-product relative">
@@ -151,7 +154,7 @@ $row = $qr->fetch_array();
                         <div class="card-contect p-3">
                             <div class="flex justify-between">
                                 <p class="text-base font-bold"><?php echo $product['plant_name'] ?></p>
-                                <p class="font-bold text-lg text-red-500">$<?php echo $product['price'] ?></p>
+                                <p class="font-bold text-lg text-red-500">$<?php echo $price ?></p>
                             </div>
                             <div class="flex my-2">
                                 <div class="bg-green-700 rounded-full text-white px-2 shadow">
@@ -183,7 +186,7 @@ $row = $qr->fetch_array();
                 <a href="index.php?loadmore" class="text-center py-2 px-4 bg-black text-white load-more">Load more</a>
             </div>
         <?php
-        } else{
+        } else {
             echo '';
         }
         ?>
