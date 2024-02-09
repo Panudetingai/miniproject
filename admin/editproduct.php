@@ -77,7 +77,7 @@ if (isset($_GET['delete_product'])) {
                         <div class="card-body-product relative">
                             <img src="../assets/img/product/<?php echo $product['plant_img'] ?>" class="object-cover h-40 w-full" alt="">
                             <div class="discount absolute top-0 left-0 bg-green-700 text-white rounded-r-sm px-2">
-                                <p><?php echo $product['discount'] ?></p>
+                                <p><?php echo $product['discount'] ?>%</p>
                             </div>
                             <div class="delete absolute top-0 right-0 bg-red-500 text-white rounded-l-sm px-2">
                                 <a href="editproduct.php?delete_product=<?php echo $product['plant_id'] ?>"><i class="fa fa-trash-can m-1"></i></a>
