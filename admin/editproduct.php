@@ -30,9 +30,9 @@ if (isset($_GET['delete_product'])) {
     $(document).ready(function(){
         Swal.fire({
             position: 'top',
-            type: 'error',
-            icon: 'error',
-            title: 'You not admin'
+            type: 'success',
+            icon: 'success',
+            title: 'Delete Product Success'
         });
     });
     </script>
@@ -49,6 +49,7 @@ if (isset($_GET['delete_product'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('../head.php'); ?>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="shortcut icon" href="../assets/img/EA.png" type="image/x-icon">
     <title>Edit Product</title>
 </head>
 

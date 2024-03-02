@@ -25,7 +25,7 @@ $row = $qr->fetch_array();
 
 <head>
     <?php include('head.php') ?>
-    <link rel="shortcut icon" href="assets/img/logo (2).png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/EA.png" type="image/x-icon">
     <title>Shop plants</title>
 </head>
 
@@ -34,15 +34,12 @@ $row = $qr->fetch_array();
     <!-- slide banner -->
     <div class="banner" id="banner">
         <div class="img max-sm:flex max-sm:justify-center max-sm:text-center max-sm:h-[350px] max-full max-h-screen overflow-hidden">
-            <img src="assets/img/banner.jpg" class="" alt="">
+            <img src="assets/img/FIFA-22-Intros.jpg" class="" alt="">
         </div>
-        <div class="text-img absolute inset-x-0 mx-auto lg:top-64 text-center lg:w-[650px] max-sm:w-[450px] sm:top-36 max-sm:top-36 md:top-36">
-            <p class="font-bold lg:text-3xl mb-2 max-sm:text-2xl sm:text-2xl md:text-2xl">Welcome to Shop Plant</p>
-            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda veritatis magni autem commodi officiis explicabo recusandae sunt aliquam deleniti. Maiores magnam laborum, sint sit iusto vero a maxime voluptatum impedit!</p>
-            <button class="bg-green-600 text-white py-3 px-6 rounded-full mt-2 hover:bg-green-400 duration-150 ease">
-                Get Started
-            </button>
-        </div>
+        <!-- <div class="text-img absolute inset-x-0 mx-auto lg:top-64 text-center lg:w-[650px] max-sm:w-[450px] sm:top-36 max-sm:top-36 md:top-36">
+            <p class="font-bold lg:text-3xl mb-2 max-sm:text-2xl sm:text-2xl md:text-2xl text-white">Welcome to Shop Plant</p>
+            <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elt. Assumenda veritatis magni autem commodi officiis explicabo recusandae sunt aliquam deleniti. Maiores magnam laborum, sint sit iusto vero a maxime voluptatum impedit!</p>
+        </div> -->
     </div>
 
     <!-- card-plant -->
@@ -65,7 +62,7 @@ $row = $qr->fetch_array();
                                         <img class="h-40 w-full bg-no-repeat bg-center bg-cover object-cover" src="assets/img/product/<?php echo $row['plant_img'] ?>" alt="">
                                     </div>
                                     <div class="card-contact p-3">
-                                        <p class="name-product text-green-600 text-lg"><?php echo $row['plant_name'] ?></>
+                                        <p class="name-product text-black-600 text-lg"><?php echo $row['plant_name'] ?></>
                                         <div class="text-cantact">
                                             <p><?php echo $row['price'] ?> บาท</p>
                                         </div>
@@ -98,10 +95,10 @@ $row = $qr->fetch_array();
         <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center my-5">
             <div class="card-items w-76 h-[300px] bg-white p-5 rounded-md shadow grid grid-rows-2 justify-items-center hover:translate-y-5 duration-200 ease-out m-5" data-aos="fade-up" data-aos-duration="1000">
                 <div class="rounded-full bg-white overflow-hidden flex items-center justify-center p-5 w-[85px] h-[85px] shadow">
-                    <i class="fa-solid fa-seedling text-4xl m-0"></i>
+                    <i class="fa-solid fa-gamepad text-4xl m-0"></i>
                 </div>
                 <div class="text-service text-center w-60">
-                    <p class="text-lg font-bold">Consultation</p>
+                    <p class="text-lg font-bold">Game</p>
                     <span class="text-sm">This service can include providing advice on plant care aspects such as watering, fertilizing, and managing diseases and pests</span>
                 </div>
             </div>
@@ -148,7 +145,7 @@ $row = $qr->fetch_array();
                         <div class="card-body-product relative">
                             <img src="assets/img/product/<?php echo $product['plant_img'] ?>" class="object-cover h-40 w-full" alt="">
                             <div class="discount absolute top-0 left-0 bg-green-700 text-white rounded-r-sm px-2">
-                                <p><?php echo $product['discount'] ?></p>
+                                <p><?php echo $product['discount'] ?>%</p>
                             </div>
                         </div>
                         <div class="card-contect p-3">
@@ -200,8 +197,8 @@ $row = $qr->fetch_array();
             <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                 <div class="mb-6 md:mb-0">
                     <a href="index.php" class="flex items-center">
-                        <img src="assets/img/logo (2).png" class="h-8 me-3 bg-white rounded-full" alt="FlowBite Logo" />
-                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Shop plant</span>
+                        <img src="assets/img/EA.png" class="h-8 me-3 bg-white rounded-full" alt="FlowBite Logo" />
+                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Game plant</span>
                     </a>
                 </div>
                 <div>

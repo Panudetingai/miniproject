@@ -46,6 +46,7 @@ if (isset($_GET['delete_cart'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('head.php'); ?>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="shortcut icon" href="assets/img/EA.png" type="image/x-icon">
     <title>Edit Product</title>
 </head>
 
@@ -78,8 +79,8 @@ if (isset($_GET['delete_cart'])) {
                 </div>
                 <div class="flex flex-1  justify-center sm:items-stretch sm:justify-start">
                     <a href="##" class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto" src="https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-food-logo-png-image_5687686.png" alt="Your Company" />
-                        <p class="text-white" style="margin: 0;">Food shop</p>
+                        <img class="h-8 w-auto" src="assets/img/EA.png" alt="Your Company" />
+                        <p class="text-white" style="margin: 0;">Game shop</p>
                     </a>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
@@ -132,7 +133,7 @@ if (isset($_GET['delete_cart'])) {
 
     <div class="product lg:px-56 my-12 max-sm:px-12" id="about">
         <div class="head flex justify-between">
-            <h1 class="text-2xl font-bold">Edit Product</h1>
+            <h1 class="text-2xl font-bold">Edit MyCart</h1>
             <form action="search_cart.php" method="post" class="search flex items-center border rounded-md overflow-hidden">
                 <input type="text" name="search" class="px-2 outline-none" placeholder="Search" id="">
                 <button class="fa-solid fa-magnifying-glass bg-black text-white py-2 px-3"></button>

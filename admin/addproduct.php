@@ -33,6 +33,7 @@ if ($row['status'] == 'user') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('../head.php') ?>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="shortcut icon" href="../assets/img/EA.png" type="image/x-icon">
     <script src="../tailwind.config.js"></script>
     <title>Add product</title>
 </head>

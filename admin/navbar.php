@@ -32,7 +32,7 @@ if (isset($_POST['logout'])) {
             </div>
             <div class="flex flex-1  justify-center sm:items-stretch sm:justify-start">
                 <a href="##" class="flex flex-shrink-0 items-center">
-                    <img class="h-8 w-auto" src="https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-food-logo-png-image_5687686.png" alt="Your Company" />
+                    <img class="h-8 w-auto" src="../assets/img/EA.png" alt="Your Company" />
                     <p class="text-white" style="margin: 0;">Admin Shop</p>
                 </a>
                 <div class="hidden sm:ml-6 sm:block">
